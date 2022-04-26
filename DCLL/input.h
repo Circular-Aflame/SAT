@@ -12,7 +12,7 @@ class Formula
 {
 private:
 	int numVariable;//number of variable
-	char* variable;
+	char* variable;//variable name
 
 public:
 	void input();
