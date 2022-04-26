@@ -11,8 +11,8 @@
 class Formula
 {
 private:
-	int numVariable;
-	char* variable;
+	int numVariable;//number of variable
+	char* variable;//variable name
 
 public:
 	void input();
