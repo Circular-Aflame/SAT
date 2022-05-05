@@ -8,17 +8,22 @@
 //Date:2022.4.25
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class Formula
 {
 private:
 	int numVariable;//number of variable
-	char* variable;//variable name
+	vector<string> variable;//variable name
 	string oringin;//oringinal formula
+	int numConj;//number of conjunctive
+	int** conj;//
+
 public:
-	
-	void input();//input the formula
+	Formula(string a) {input(a);}
+	void input(string a);//input the formula
+	void getVariable(string a);//get the variables
 	void output();//output the conjunctive
 	void stdoutput();//the oringinal formula as when it was input
 
