@@ -16,17 +16,23 @@ class Formula
 private:
 	int numVariable;//number of variable
 	vector<string> variable;//variable name
-	string oringin;//oringinal formula
+	string origin;//oringinal formula
 	int numConj;//number of conjunctive
-	int** conj;//
-
+	int** conj;//storey of conjuntives
+	bool* value;//results
+	int numValue;//sum of values
 public:
+	Formula() {}
 	Formula(string a) {input(a);}
 	void input(string a);//input the formula
 	void getVariable(string a);//get the variables
+	void getConj(string a);//get the conj
+
+	void calcu();
+
 	void output();//output the conjunctive
 	void stdoutput();//the oringinal formula as when it was input
-
+	void showVariable();
 };
 
 #endif
