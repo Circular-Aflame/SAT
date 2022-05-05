@@ -6,16 +6,21 @@
 // Output the stantard conjunctive clauses of the formula.
 //Auther: circular
 //Date:2022.4.25
-#include <stdio.h>
+#include <iostream>
+#include <string>
+using namespace std;
 
 class Formula
 {
 private:
 	int numVariable;//number of variable
 	char* variable;//variable name
-
+	string oringin;//oringinal formula
 public:
-	void input();
+	
+	void input();//input the formula
+	void output();//output the conjunctive
+	void stdoutput();//the oringinal formula as when it was input
 
 };
 
