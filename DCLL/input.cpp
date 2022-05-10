@@ -73,7 +73,7 @@ void Formula::getConj(string a)
 
 void Formula::input(string a)
 {
-    numConj=0;
+    numConj=1;
     for(int i=0;a[i];i++)
     {
         if(a[i]=='&')
