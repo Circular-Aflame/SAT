@@ -13,7 +13,7 @@ using namespace std;
 
 class Formula
 {
-private:
+protected:
 	int numVariable;//number of variable
 	vector<string> variable;//variable name
 	string origin;//oringinal formula

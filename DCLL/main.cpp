@@ -1,4 +1,5 @@
 #include "input.h"
+#include "dcll.h"
 
 int main()
 {
@@ -10,5 +11,9 @@ int main()
     form.showVariable();
     form.calcu();
     form.stdoutput();
+
+    Dcll solver(a);
+    cout<<solver.start();
+
     return 0;
 }
