@@ -16,4 +16,3 @@ int main()
     cout<<solver.start();
 
     return 0;
-}

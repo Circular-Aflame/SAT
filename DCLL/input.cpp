@@ -155,4 +155,3 @@ void Formula::showVariable()
         cout<<variable[i]<<" ";
     }
     cout<<endl;
-}
