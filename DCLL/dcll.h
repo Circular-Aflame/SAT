@@ -35,5 +35,3 @@ public:
     bool start();
     bool judge(int noVa,bool val);
 };
-
-#endif

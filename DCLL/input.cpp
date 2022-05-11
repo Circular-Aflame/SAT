@@ -145,6 +145,7 @@ void Formula::stdoutput()
             cout<<" "<<i;
         }
     }
+    cout<<endl;
 }
 
 void Formula::showVariable()
@@ -154,4 +155,3 @@ void Formula::showVariable()
         cout<<variable[i]<<" ";
     }
     cout<<endl;
-}
