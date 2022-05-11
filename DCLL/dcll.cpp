@@ -118,11 +118,11 @@ bool Dcll::start()
 {
     isolate();
     single();
-    if(clearall)
+    if(clearall())
     {
         return true;
     }
-    if(emptyClause)
+    if(emptyClause())
     {
         return false;
     }
