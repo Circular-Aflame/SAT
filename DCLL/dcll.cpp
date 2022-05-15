@@ -176,3 +176,4 @@ bool Dcll::judge(int noVa,bool val)
     Dcll sub=*this;
     sub.change(noVa,val);
     return sub.start();
+}
