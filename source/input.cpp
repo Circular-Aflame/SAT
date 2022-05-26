@@ -150,8 +150,9 @@ void Formula::stdoutput()
 
 void Formula::showVariable()
 {
-    for(int i=0;i<numVariable;i++)
+    for (int i = 0; i < numVariable; i++)
     {
-        cout<<variable[i]<<" ";
+        cout << variable[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
+}

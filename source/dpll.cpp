@@ -1,6 +1,6 @@
-#include "dcll.h"
+#include "dpll.h"
 
-Dcll::Dcll(const Dcll&papa)
+Dpll::Dpll(const Dpll&papa)
 {
     numVariable=papa.numVariable;
     variable=papa.variable;
@@ -22,7 +22,7 @@ Dcll::Dcll(const Dcll&papa)
     }
 }
 
-bool Dcll::emptyClause()
+bool Dpll::emptyClause()
 {
     for(int i=0;i<numConj;i++)
     {
@@ -34,7 +34,7 @@ bool Dcll::emptyClause()
     return false;
 }
 
-void Dcll::deleClause(int i)
+void Dpll::deleClause(int i)
 {
     clause[i]=-1;
     for(int j=0;j<numVariable;j++)
@@ -46,7 +46,7 @@ void Dcll::deleClause(int i)
     }
 }
 
-void Dcll::single()
+void Dpll::single()
 {
     for(int i=0;i<numVariable;i++)
     {
@@ -63,7 +63,7 @@ void Dcll::single()
     }
 }
 
-void Dcll::isolate()
+void Dpll::isolate()
 {
     int tem=-1;
     int test;
@@ -102,7 +102,7 @@ void Dcll::isolate()
     isolate();
 }
 
-bool Dcll::clearall()
+bool Dpll::clearall()
 {
     for(int i=0;i<numConj;i++)
     {
@@ -114,7 +114,7 @@ bool Dcll::clearall()
     return true;
 }
 
-bool Dcll::start()
+bool Dpll::start()
 {
     isolate();
     single();
@@ -138,7 +138,7 @@ bool Dcll::start()
     return judge(no,0)||judge(no,1);
 }
 
-void Dcll::change(int noVa,bool val)
+void Dpll::change(int noVa,bool val)
 {
     for(int i=0;i<numConj;i++)
     {
@@ -171,9 +171,9 @@ void Dcll::change(int noVa,bool val)
     }
 }
 
-bool Dcll::judge(int noVa,bool val)
+bool Dpll::judge(int noVa,bool val)
 {
-    Dcll sub=*this;
+    Dpll sub=*this;
     sub.change(noVa,val);
     return sub.start();
 }

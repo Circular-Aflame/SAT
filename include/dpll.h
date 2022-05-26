@@ -1,16 +1,16 @@
-#ifndef DCLL_H_
-#define DCLL_H_
+#ifndef DPLL_H_
+#define DPLL_H_
 
 #include "input.h"
 
-class Dcll:public Formula
+class Dpll:public Formula
 {
 private:
     int *clause;//clause usable unit number
     int *timVariable;//the time a variable show up
 public:
-    Dcll() {}
-    Dcll(string a):Formula(a) {
+    Dpll() {}
+    Dpll(string a):Formula(a) {
         clause=new int[numConj]();
         timVariable=new int[numVariable]();
         for(int i=0;i<numConj;i++)
@@ -25,7 +25,7 @@ public:
             }
         }
     }
-    Dcll(const Dcll& papa);
+    Dpll(const Dpll& papa);
     void change(int noVa,bool val);
     void deleClause(int i);
     void isolate();//if there is a clause with one variable
@@ -35,3 +35,5 @@ public:
     bool start();
     bool judge(int noVa,bool val);
 };
+
+#endif
