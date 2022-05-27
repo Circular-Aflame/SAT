@@ -1,15 +1,7 @@
 # SAT
 ### Input
-define a class of formula to store the input
+(variable|!variable|...)&(variable)...
 ### algorithm
 DPLL solver
-
-## Problem
-
-About input
-
-* whether to accept non-single-word variable name or not.
-* whether or not to preserve the original variable name
-
-* store the formula as a string or a relationship between variables using standard conjunctive
-* 
+CDCL extension
+violent traversal
