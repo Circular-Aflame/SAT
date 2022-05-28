@@ -9,6 +9,10 @@ Dpll::Dpll(const Dpll&papa)
     for(int i=0;i<numConj;i++)
     {
         conj[i]=new int[numVariable]();
+        for(int j=0;j<numVariable;j++)
+        {
+            conj[i][j]=papa.conj[i][j];
+        }
     }
     clause=new int[numConj]();
     for(int i=0;i<numConj;i++)
@@ -42,6 +46,7 @@ void Dpll::deleClause(int i)
         if(conj[i][j])
         {
             timVariable[j]--;
+            conj[i][j]=0;
         }
     }
 }
@@ -140,32 +145,32 @@ bool Dpll::start()
 
 void Dpll::change(int noVa,bool val)
 {
-    for(int i=0;i<numConj;i++)
+    for(int i=0;i<this->numConj;i++)
     {
-        if(conj[i][noVa]==1)
+        if(this->conj[i][noVa]==1)
         {
             if(val)
             {
-                deleClause(i);
+                this->deleClause(i);
             }
             else
             {
-                clause[i]--;
-                conj[i][noVa]=0;
-                timVariable[noVa]--;
+                this->clause[i]--;
+                this->conj[i][noVa]=0;
+                this->timVariable[noVa]--;
             }
         }
-        if(conj[i][noVa]==-1)
+        if(this->conj[i][noVa]==-1)
         {
             if(val)
             {
-                clause[i]--;
-                conj[i][noVa]=0;
-                timVariable[noVa]--;
+                this->clause[i]--;
+                this->conj[i][noVa]=0;
+                this->timVariable[noVa]--;
             }
             else
             {
-                deleClause(i);
+                this->deleClause(i);
             }
         }
     }
